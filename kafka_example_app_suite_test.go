@@ -1,4 +1,4 @@
-package kafka_example_app_test
+package main_test
 
 import (
 	. "github.com/onsi/ginkgo"
@@ -9,5 +9,5 @@ import (
 
 func TestKafkaExampleApp(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "KafkaExampleApp Suite")
+	RunSpecs(t, "Webserver Suite")
 }
