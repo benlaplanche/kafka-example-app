@@ -2,11 +2,15 @@ package main
 
 import (
 	"fmt"
-	webserver "github.com/benlaplanche/kafka-example-app/webserver"
+	"github.com/benlaplanche/cf-kafka-example-app/api"
+	"github.com/gorilla/mux"
 	"net/http"
 )
 
 func main() {
 	fmt.Println("Server starting")
-	http.ListenAndServe(":3000", webserver.Handlers())
+
+	api := api.New()
+
+	http.ListenAndServe(":3000", api)
 }
