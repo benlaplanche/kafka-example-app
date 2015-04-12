@@ -14,8 +14,8 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		port = "80"
 	}
 
-	http.ListenAndServe("0.0.0.0:"+port, api)
+	http.ListenAndServe(":"+port, api)
 }
