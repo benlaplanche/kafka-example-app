@@ -1,0 +1,22 @@
+{
+ "VCAP_APPLICATION": {
+  "application_name": "kafka",
+  "application_uris": [
+   "kafka.cfapps.io"
+  ],
+  "application_version": "3f0dd722-3f38-4f25-82f0-c3bca647e8fd",
+  "limits": {
+   "disk": 1024,
+   "fds": 16384,
+   "mem": 512
+  },
+  "name": "kafka",
+  "space_id": "066052b8-03f5-4f72-a0a7-bcb3c7a8a9d2",
+  "space_name": "development",
+  "uris": [
+   "kafka.cfapps.io"
+  ],
+  "users": null,
+  "version": "3f0dd722-3f38-4f25-82f0-c3bca647e8fd"
+ }
+}

@@ -2,8 +2,10 @@ package api
 
 import (
 	"fmt"
+	"github.com/cloudfoundry-community/go-cfenv"
 	"github.com/gorilla/mux"
 	"net/http"
+	"os"
 )
 
 func Router() *mux.Router {
@@ -21,6 +23,28 @@ func RouterHandler(router *mux.Router) http.HandlerFunc {
 }
 
 func RootPathHandler(rw http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(rw, "hello world")
-	rw.WriteHeader(http.StatusOK)
+	appEnv, err := cfenv.Current()
+
+	if err != nil {
+		fmt.Fprintln(rw, "error")
+		rw.WriteHeader(http.StatusBadRequest)
+		return
+	}
+
+	services := appEnv.Services
+	fmt.Println(services)
+	_, error := services.WithName("p-kafka")
+
+	if error != nil {
+		fmt.Fprintln(rw, "Unable to find the Kafka credentials in VCAP_SERVICES")
+		rw.WriteHeader(http.StatusBadRequest)
+		return
+	} else {
+
+		fmt.Fprintln(rw, "hello world")
+		rw.WriteHeader(http.StatusOK)
+		return
+	}
+
+	return
 }

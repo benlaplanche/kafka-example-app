@@ -1,0 +1,33 @@
+{
+ "VCAP_SERVICES": {
+  "p-kafka": [
+   {
+    "kafka": {
+     "port": 9092,
+     "node_ips": [
+      "10.0.0.39",
+      "10.0.0.40",
+      "10.0.0.41",
+      "10.0.0.42",
+      "10.0.0.43"
+     ],
+    },
+    "zookeeper": {
+     "port": 2181,
+     "node_ips": [
+      "10.0.0.44",
+      "10.0.0.45",
+      "10.0.0.46"
+     ],
+    },
+    "label": "p-kafka",
+    "name": "kafka",
+    "plan": "single-tenant",
+    "tags": [
+     "pivotal",
+     "kafka"
+    ]
+   }
+  ]
+ }
+}
