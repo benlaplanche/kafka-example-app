@@ -24,7 +24,8 @@ var _ = Describe("API", func() {
 		It("works", func() {
 			response := makeRequest()
 
-			Expect(response.Body).To(ContainSubstring("hello world"))
+			Expect(response.Body.String()).To(ContainSubstring("hello world"))
+			Expect(response.Code).To(Equal(200))
 		})
 
 	})
