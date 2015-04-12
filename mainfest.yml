@@ -1,0 +1,6 @@
+---
+applications:
+- name: kafka
+  memory: 512M
+  host: kafka
+  buildpack: go_buildpack
