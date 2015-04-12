@@ -1,1 +1,0 @@
-web: kafka-example-app

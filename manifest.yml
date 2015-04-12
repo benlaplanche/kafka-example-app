@@ -3,4 +3,4 @@ applications:
 - name: kafka
   memory: 512M
   host: kafka
-  path: .
+  command: kafka-example-app
