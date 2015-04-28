@@ -1,22 +1,29 @@
 {
- "VCAP_APPLICATION": {
+  "limits": {
+    "mem": 512,
+    "disk": 1024,
+    "fds": 16384
+  },
+  "application_version": "6e094e30-5682-4f95-b630-b5855b7ab772",
   "application_name": "kafka",
   "application_uris": [
-   "kafka.cfapps.io"
+    "kafka.cfapps.io"
   ],
-  "application_version": "3f0dd722-3f38-4f25-82f0-c3bca647e8fd",
-  "limits": {
-   "disk": 1024,
-   "fds": 16384,
-   "mem": 512
-  },
+  "version": "6e094e30-5682-4f95-b630-b5855b7ab772",
   "name": "kafka",
-  "space_id": "066052b8-03f5-4f72-a0a7-bcb3c7a8a9d2",
   "space_name": "development",
+  "space_id": "066052b8-03f5-4f72-a0a7-bcb3c7a8a9d2",
   "uris": [
-   "kafka.cfapps.io"
+    "kafka.cfapps.io"
   ],
   "users": null,
-  "version": "3f0dd722-3f38-4f25-82f0-c3bca647e8fd"
- }
+  "application_id": "a96a4280-4634-4d26-8cda-e39c85b5394e",
+  "instance_id": "afc9305936bc40b6b37cc0cc38f9c2b2",
+  "instance_index": 0,
+  "host": "0.0.0.0",
+  "port": 61462,
+  "started_at": "2015-04-13 18:53:02 +0000",
+  "started_at_timestamp": 1428951182,
+  "start": "2015-04-13 18:53:02 +0000",
+  "state_timestamp": 1428951182
 }
