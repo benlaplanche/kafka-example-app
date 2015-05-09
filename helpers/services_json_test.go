@@ -15,12 +15,14 @@ var _ = Describe("VCAP_SERVICES", func() {
 			file, _ := ioutil.ReadFile("../assets/vcap_services_false.json")
 			kafka, zookeeper, err := services_json.Parse(string(file[:]))
 
+			Expect(err).Should(HaveOccurred())
+
 			Expect(kafka.Port).To(Equal(0))
 			Expect(len(kafka.Nodes)).To(Equal(0))
 
 			Expect(zookeeper.Port).To(Equal(0))
 			Expect(len(zookeeper.Nodes)).To(Equal(0))
-			Expect(err).Should(HaveOccurred())
+
 		})
 
 		It("has the correct Kafka service properties", func() {
