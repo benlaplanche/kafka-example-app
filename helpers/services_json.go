@@ -3,6 +3,7 @@ package services_json
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 )
 
 type VCAPServices struct {
@@ -36,7 +37,7 @@ func Parse(vcap_services string) (kafka Result, zookeeper Result, err error) {
 	var parent VCAPServices
 
 	if err := json.Unmarshal([]byte(vcap_services), &parent); err != nil {
-		// fmt.Println(err)
+		fmt.Println(err)
 		return Result{}, Result{}, err
 	}
 	// fmt.Printf("%+v\n", parent.Service)
